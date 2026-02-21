@@ -1,0 +1,11 @@
+# Mengizinkan semua bot (Google, Bing, dll) untuk menelusuri situs
+User-agent: *
+Allow: /
+
+# Melarang akses ke folder sistem atau file sensitif (jika ada nantinya)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Memberitahu lokasi Sitemap agar Google cepat menemukan semua halaman
+Sitemap: https://multi-jasa-net.vercel.app/sitemap.xml
