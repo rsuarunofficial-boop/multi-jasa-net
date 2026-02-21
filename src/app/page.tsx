@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Wifi, ShieldCheck, Wrench, Info, CheckCircle2 } from 'lucide-react';
 import React from 'react';
+import Testimonials from '../components/Testimonials'; // Pastikan path ini sesuai
 
 // 1. Definisi Tipe Data (Interface) untuk Props
 interface ServiceCardProps {
@@ -33,6 +34,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="flex-1 relative w-full h-[300px] md:h-[400px]">
+            {/* Prioritas muat gambar untuk skor LCP 100 */}
             <Image 
               src="/images/foto-teknisi.webp" 
               alt="Teknisi Multi Jasa Net sedang melakukan instalasi"
@@ -70,7 +72,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. TENTANG KAMI (ABOUT US) SECTION */}
+      {/* 3. TESTIMONIAL SECTION */}
+      <Testimonials />
+
+      {/* 4. TENTANG KAMI (ABOUT US) SECTION */}
       <section className="bg-slate-50 py-24 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
           <div className="flex-1">
@@ -97,13 +102,22 @@ export default function HomePage() {
              <h3 className="text-xl font-bold mb-4">Lokasi Workshop</h3>
              <p className="text-slate-600 mb-6 font-normal">Jl. Line Pipa, Alue Lim, Kec. Blang Mangat, Kota Lhokseumawe</p>
              <div className="aspect-video bg-slate-200 rounded-lg overflow-hidden flex items-center justify-center">
-                <span className="text-slate-500 italic font-normal text-sm">Peta Google Maps di sini</span>
+                {/* Ganti link src di bawah dengan link embed dari Google Maps Anda */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.5532585483244!2d97.1515!3d5.1411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMDgnMjguMCJOIDk3wrAwOScwNS40IkU!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
              </div>
           </div>
         </div>
       </section>
 
-      {/* 4. FOOTER */}
+      {/* 5. FOOTER */}
       <footer className="py-12 border-t border-slate-100 text-center">
         <p className="text-slate-500 font-normal">© 2026 Multi Jasa Net Lhokseumawe. Semua hak dilindungi.</p>
       </footer>
@@ -112,7 +126,7 @@ export default function HomePage() {
   );
 }
 
-// 2. Sub-komponen dengan Type Safety
+// Sub-komponen dengan Type Safety
 function ServiceCard({ icon, title, desc }: ServiceCardProps) {
   return (
     <div className="p-8 bg-white border border-slate-100 rounded-2xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
