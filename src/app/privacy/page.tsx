@@ -13,6 +13,11 @@ export default function PrivacyMainPage() {
       slug: "privacy-quickqrscanner", 
       desc: "Pemindai kode QR dan barcode yang cepat dan aman." 
     },
+    { 
+      name: "RT RW Net SpeedTest", 
+      slug: "privacy-rtrwnet-speedtest", 
+      desc: "Alat uji kecepatan jaringan internet untuk rumah dan kantor." 
+    },
   ];
 
   return (
