@@ -24,13 +24,13 @@ const privacyData: Record<string, { title: string; date: string; content: React.
     )
   },
   "privacy-rtrwnet-speedtest": {
-    title: "Privacy Policy – RT RW Net SpeedTest",
+    title: "Privacy Policy – Speed Test WiFi",
     date: "02 Maret 2026",
     content: (
       <div className="space-y-10 font-normal text-slate-600">
         <section className="space-y-4">
           <p className="text-lg text-slate-700 leading-relaxed">
-            Multi Jasa Net built the RT RW Net SpeedTest app as a free app. This SERVICE is provided at no cost and is intended for use as is.
+            Multi Jasa Net built the Speed Test WiFi app as a free app. This SERVICE is provided at no cost and is intended for use as is.
           </p>
         </section>
 

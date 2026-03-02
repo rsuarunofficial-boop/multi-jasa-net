@@ -14,7 +14,7 @@ export default function PrivacyMainPage() {
       desc: "Pemindai kode QR dan barcode yang cepat dan aman." 
     },
     { 
-      name: "RT RW Net SpeedTest", 
+      name: "Speed Test WiFi", 
       slug: "privacy-rtrwnet-speedtest", 
       desc: "Alat uji kecepatan jaringan internet untuk rumah dan kantor." 
     },
