@@ -18,6 +18,11 @@ export default function PrivacyMainPage() {
       slug: "privacy-rtrwnet-speedtest", 
       desc: "Alat uji kecepatan jaringan internet untuk rumah dan kantor." 
     },
+    { 
+      name: "Resep Masakan Indonesia", 
+      slug: "privacy-resepmasakanindonesia", 
+      desc: "Aplikasi resep masakan Indonesia." 
+    },
   ];
 
   return (
