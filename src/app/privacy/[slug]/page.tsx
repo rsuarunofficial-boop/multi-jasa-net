@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Mail, Activity, ArrowLeft, Database, Utensils } from 'lucide-react';
+import { ShieldCheck, Mail, Activity, ArrowLeft, Database, Utensils, Camera } from 'lucide-react';
 import Link from 'next/link';
 
 // 1. Objek Data untuk menampung semua konten kebijakan privasi
@@ -143,7 +143,30 @@ const privacyData: Record<string, { title: string; date: string; content: React.
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-xl font-bold text-slate-900">3. Advertising</h2>
+          <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <Camera className="w-5 h-5 text-blue-600" /> 3. Camera Usage (AR Feature)
+          </h2>
+          <p>
+            Bubble Level Pro may use your device camera to enable an <strong>Augmented Reality (AR) leveling feature</strong>.
+          </p>
+          <p>
+            The camera is used only to display the real-world surface through the device camera so that the bubble level measurement can be overlaid on the screen.
+          </p>
+          <p>Important information about camera usage:</p>
+          <ul className="list-disc ml-6 space-y-2 text-sm">
+            <li>The camera is used <strong>only while the AR feature is active</strong>.</li>
+            <li>The app <strong>does not record photos or videos</strong>.</li>
+            <li>The app <strong>does not store camera images</strong>.</li>
+            <li>The app <strong>does not transmit camera data to any server</strong>.</li>
+            <li>All camera processing occurs <strong>locally on your device</strong>.</li>
+          </ul>
+          <p>
+            The camera permission is required solely to provide the AR measurement experience.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">4. Advertising</h2>
           <p>Bubble Level Pro uses <strong>Google AdMob</strong> to display advertisements.</p>
           <p>AdMob may collect certain information automatically in order to provide personalized or non-personalized ads, including:</p>
           <ul className="list-disc ml-6 space-y-2 text-sm">
@@ -158,7 +181,7 @@ const privacyData: Record<string, { title: string; date: string; content: React.
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-xl font-bold text-slate-900">4. Third-Party Services</h2>
+          <h2 className="text-xl font-bold text-slate-900">5. Third-Party Services</h2>
           <p>The app may use third-party services that may collect information used to identify you.</p>
           <p>Third-party services used:</p>
           <ul className="list-disc ml-6 space-y-2 text-sm">
@@ -168,7 +191,7 @@ const privacyData: Record<string, { title: string; date: string; content: React.
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-xl font-bold text-slate-900">5. Children's Privacy</h2>
+          <h2 className="text-xl font-bold text-slate-900">6. Children's Privacy</h2>
           <p>Bubble Level Pro is <strong>not directed to children under the age of 13</strong>.</p>
           <p>We do not knowingly collect personal information from children.</p>
           <p>If you believe that a child has provided personal information through the app, please contact us and we will promptly remove such information.</p>
@@ -176,13 +199,13 @@ const privacyData: Record<string, { title: string; date: string; content: React.
 
         <section className="space-y-4">
           <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-            <ShieldCheck className="w-5 h-5 text-blue-600" /> 6. Data Security
+            <ShieldCheck className="w-5 h-5 text-blue-600" /> 7. Data Security
           </h2>
           <p>Since Bubble Level Pro does not collect or store personal information, there is no user data stored on our servers.</p>
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-xl font-bold text-slate-900">7. Changes to This Privacy Policy</h2>
+          <h2 className="text-xl font-bold text-slate-900">8. Changes to This Privacy Policy</h2>
           <p>We may update this Privacy Policy from time to time.</p>
           <p>Any changes will be posted on this page with an updated revision date.</p>
           <p>Users are advised to review this Privacy Policy periodically.</p>
@@ -190,7 +213,7 @@ const privacyData: Record<string, { title: string; date: string; content: React.
 
         <section className="bg-slate-950 p-10 rounded-3xl text-slate-200">
           <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <Mail className="w-5 h-5 text-blue-400" /> 8. Contact Us
+            <Mail className="w-5 h-5 text-blue-400" /> 9. Contact Us
           </h2>
           <p>If you have any questions about this Privacy Policy, you can contact us:</p>
           <p className="text-blue-400 font-medium text-lg mt-2">azwar.pnl@gmail.com</p>
