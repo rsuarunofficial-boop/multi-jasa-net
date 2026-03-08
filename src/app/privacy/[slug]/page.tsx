@@ -105,8 +105,108 @@ const privacyData: Record<string, { title: string; date: string; content: React.
         </section>
       </div>
     )
+  },
+  // ENTRI BARU UNTUK BUBBLE LEVEL PRO
+  "privacy-bubble-level-pro": {
+    title: "Privacy Policy – Bubble Level Pro",
+    date: "08 Maret 2026",
+    content: (
+      <div className="space-y-8 font-normal text-slate-600">
+        <p className="text-lg text-slate-700 leading-relaxed">
+          Bubble Level Pro ("we", "our", or "us") respects your privacy. This Privacy Policy explains how our mobile application handles information when you use the app.
+        </p>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">1. Information We Do Not Collect</h2>
+          <p>
+            Bubble Level Pro does <strong>not collect, store, or share any personal information</strong> from users.
+          </p>
+          <p>
+            We do not require users to create accounts, log in, or provide personal data such as name, email address, phone number, or location.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <Activity className="w-5 h-5 text-blue-600" /> 2. Sensor Data
+          </h2>
+          <p>
+            The application uses the device <strong>accelerometer sensor</strong> to detect device tilt in order to provide the bubble level functionality.
+          </p>
+          <p>This sensor data:</p>
+          <ul className="list-disc ml-6 space-y-2 text-sm">
+            <li>is processed <strong>locally on your device</strong></li>
+            <li>is <strong>not stored</strong></li>
+            <li>is <strong>not transmitted to any server</strong></li>
+            <li>is used only while the app is running</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">3. Advertising</h2>
+          <p>Bubble Level Pro uses <strong>Google AdMob</strong> to display advertisements.</p>
+          <p>AdMob may collect certain information automatically in order to provide personalized or non-personalized ads, including:</p>
+          <ul className="list-disc ml-6 space-y-2 text-sm">
+            <li>Device information</li>
+            <li>Advertising identifiers</li>
+            <li>Interaction with advertisements</li>
+          </ul>
+          <p>This data collection is handled directly by Google.</p>
+          <p>
+            You can learn more about how Google handles data here: <a href="https://policies.google.com/privacy" target="_blank" className="text-blue-600 hover:underline">https://policies.google.com/privacy</a>
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">4. Third-Party Services</h2>
+          <p>The app may use third-party services that may collect information used to identify you.</p>
+          <p>Third-party services used:</p>
+          <ul className="list-disc ml-6 space-y-2 text-sm">
+            <li>Google AdMob (advertising)</li>
+          </ul>
+          <p>These services have their own privacy policies and data practices.</p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">5. Children's Privacy</h2>
+          <p>Bubble Level Pro is <strong>not directed to children under the age of 13</strong>.</p>
+          <p>We do not knowingly collect personal information from children.</p>
+          <p>If you believe that a child has provided personal information through the app, please contact us and we will promptly remove such information.</p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-blue-600" /> 6. Data Security
+          </h2>
+          <p>Since Bubble Level Pro does not collect or store personal information, there is no user data stored on our servers.</p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">7. Changes to This Privacy Policy</h2>
+          <p>We may update this Privacy Policy from time to time.</p>
+          <p>Any changes will be posted on this page with an updated revision date.</p>
+          <p>Users are advised to review this Privacy Policy periodically.</p>
+        </section>
+
+        <section className="bg-slate-950 p-10 rounded-3xl text-slate-200">
+          <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <Mail className="w-5 h-5 text-blue-400" /> 8. Contact Us
+          </h2>
+          <p>If you have any questions about this Privacy Policy, you can contact us:</p>
+          <p className="text-blue-400 font-medium text-lg mt-2">azwar.pnl@gmail.com</p>
+        </section>
+      </div>
+    )
   }
 };
+
+// 1.5. Generate Static Params (Optimasi SSG)
+// Karena data privacyData statis, kita generate params-nya saat build time.
+export async function generateStaticParams() {
+  return Object.keys(privacyData).map((slug) => ({
+    slug: slug,
+  }));
+}
 
 // 2. FUNGSI UTAMA (EXPORT DEFAULT)
 export default async function PrivacyDetailPage({ params }: { params: Promise<{ slug: string }> }) {

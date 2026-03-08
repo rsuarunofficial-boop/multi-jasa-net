@@ -23,6 +23,11 @@ export default function PrivacyMainPage() {
       slug: "privacy-resepmasakanindonesia", 
       desc: "Aplikasi resep masakan Indonesia." 
     },
+    { 
+      name: "Bubble Level Pro", 
+      slug: "privacy-bubble-level-pro", 
+      desc: "Alat waterpass digital presisi untuk mengukur kemiringan permukaan." 
+    },
   ];
 
   return (
