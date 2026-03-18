@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Mail, Activity, ArrowLeft, Database, Utensils, Camera } from 'lucide-react';
+import { ShieldCheck, Mail, Activity, ArrowLeft, Database, Utensils, Camera, MapPin, Wifi, Smartphone } from 'lucide-react';
 import Link from 'next/link';
 
 // 1. Objek Data untuk menampung semua konten kebijakan privasi
@@ -217,6 +217,110 @@ const privacyData: Record<string, { title: string; date: string; content: React.
           </h2>
           <p>If you have any questions about this Privacy Policy, you can contact us:</p>
           <p className="text-blue-400 font-medium text-lg mt-2">azwar.pnl@gmail.com</p>
+        </section>
+      </div>
+    )
+  },
+  // ENTRI BARU UNTUK NETWORK SIGNAL ANALYZER
+  "privacy-network-signal-analyzer": {
+    title: "Privacy Policy – Network Signal Analyzer",
+    date: "18 Februari 2026",
+    content: (
+      <div className="space-y-8 font-normal text-slate-600">
+        <p className="text-lg text-slate-700 leading-relaxed">
+          Multi Jasa Net ("we," "our," or "us") operates the Network Signal Analyzer mobile application (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
+        </p>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-blue-600" /> 1. Information Collection and Use
+          </h2>
+          <p>To provide a professional network analysis experience, our application requires access to specific technical data from your device.</p>
+          
+          <div className="grid grid-cols-1 gap-4 mt-4">
+            <div className="p-6 border border-slate-100 rounded-2xl bg-white shadow-sm">
+              <h3 className="text-slate-900 font-bold text-base mb-3 flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-blue-500" /> A. Location Data
+              </h3>
+              <p className="mb-3 text-sm">We use your location information to provide features of our Service, such as mapping signal strength, identifying nearby cell towers, and recording "Dead Zones."</p>
+              <ul className="list-disc ml-5 space-y-1 text-sm">
+                <li><strong>Permissions Used:</strong> ACCESS_FINE_LOCATION and ACCESS_COARSE_LOCATION.</li>
+                <li><strong>Usage:</strong> This data is used only while the application is in use to render markers on the map. We do not track your location in the background.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 border border-slate-100 rounded-2xl bg-white shadow-sm">
+              <h3 className="text-slate-900 font-bold text-base mb-3 flex items-center gap-2">
+                <Wifi className="w-4 h-4 text-blue-500" /> B. Network and WiFi Information
+              </h3>
+              <p className="mb-3 text-sm">To analyze your connection quality, the app accesses technical details about your WiFi and cellular networks.</p>
+              <ul className="list-disc ml-5 space-y-1 text-sm">
+                <li><strong>Permissions Used:</strong> ACCESS_WIFI_STATE, CHANGE_WIFI_STATE, and ACCESS_NETWORK_STATE.</li>
+                <li><strong>Data Processed:</strong> SSID (WiFi name), BSSID (Mac Address), frequency, channel, and signal strength (RSSI/dBm).</li>
+              </ul>
+            </div>
+
+            <div className="p-6 border border-slate-100 rounded-2xl bg-white shadow-sm">
+              <h3 className="text-slate-900 font-bold text-base mb-3 flex items-center gap-2">
+                <Smartphone className="w-4 h-4 text-blue-500" /> C. Phone State
+              </h3>
+              <p className="mb-3 text-sm">To provide advanced engineering metrics (RSRP, RSRQ, SNR, PCI, and EARFCN), we access the cellular modem status.</p>
+              <ul className="list-disc ml-5 space-y-1 text-sm">
+                <li><strong>Permission Used:</strong> READ_PHONE_STATE.</li>
+                <li><strong>Data Processed:</strong> We read signal quality parameters and carrier information. We do not access your phone calls, contacts, or personal messages.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <Database className="w-5 h-5 text-blue-600" /> 2. Data Storage
+          </h2>
+          <p>The application uses an on-device database (Room Database) to store "Dead Zone" logs (location and signal strength). This data is stored locally on your device and is not uploaded to our servers. You can clear this data at any time by clearing the application cache or uninstalling the app.</p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <Activity className="w-5 h-5 text-blue-600" /> 3. Third-Party Service Providers
+          </h2>
+          <p>We may employ third-party companies to facilitate our Service or analyze how our Service is used. These third parties have access to your data only to perform these tasks on our behalf.</p>
+          <ul className="list-disc ml-6 space-y-3 text-sm">
+            <li>
+              <strong>AdMob (Google):</strong> We use AdMob to display advertisements. AdMob may collect device identifiers and location data to serve personalized ads.<br/>
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google Privacy Policy</a>
+            </li>
+            <li>
+              <strong>OpenStreetMap (OSMDroid):</strong> We use OpenStreetMap to provide map tiles. Map data requests are sent directly to OSM servers.<br/>
+              <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">OpenStreetMap Privacy Policy</a>
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">4. Security</h2>
+          <p>The security of your data is important to us. Since the majority of technical data processed by the app stays on your device, the risk of external data breaches is significantly minimized. However, remember that no method of transmission over the internet or electronic storage is 100% secure.</p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">5. Children's Privacy</h2>
+          <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">6. Changes to This Privacy Policy</h2>
+          <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+        </section>
+
+        <section className="bg-slate-950 p-10 rounded-3xl text-slate-200">
+          <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <Mail className="w-5 h-5 text-blue-400" /> 7. Contact Us
+          </h2>
+          <p>If you have any questions about this Privacy Policy, please contact us:</p>
+          <ul className="list-disc ml-6 mt-4 space-y-2 text-sm text-slate-300">
+            <li>By visiting this website: <a href="https://multi-jasa-net.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">https://multi-jasa-net.vercel.app</a></li>
+            <li>By Email: <a href="mailto:azwar.pnl@gmail.com" className="text-blue-400 hover:underline">azwar.pnl@gmail.com</a></li>
+          </ul>
         </section>
       </div>
     )

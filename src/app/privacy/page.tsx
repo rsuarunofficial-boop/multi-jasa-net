@@ -28,6 +28,11 @@ export default function PrivacyMainPage() {
       slug: "privacy-bubble-level-pro", 
       desc: "Alat waterpass digital presisi untuk mengukur kemiringan permukaan." 
     },
+    { 
+      name: "Network Signal Analyzer", 
+      slug: "privacy-network-signal-analyzer", 
+      desc: "Alat analisis jaringan dan kekuatan sinyal WiFi/Seluler tingkat profesional." 
+    },
   ];
 
   return (
