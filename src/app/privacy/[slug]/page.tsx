@@ -49,12 +49,12 @@ const privacyData: Record<string, { title: string; date: string; content: React.
   // ENTRI BARU UNTUK RESEP MASAKAN INDONESIA
   "privacy-resepmasakanindonesia": {
     title: "Kebijakan Privasi – Resep Masakan Indonesia",
-    date: "04 Maret 2026",
+    date: "18 Maret 2026",
     content: (
       <div className="space-y-10 font-normal text-slate-600">
         <section>
           <p className="text-lg text-slate-700 leading-relaxed">
-            Selamat datang di aplikasi Resep Masakan Indonesia. Kami sangat menghargai privasi Anda.
+            Selamat datang di aplikasi Resep Masakan Indonesia. Kami sangat menghargai privasi Anda dan berkomitmen untuk melindungi data pribadi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan aplikasi kami.
           </p>
         </section>
 
@@ -62,10 +62,11 @@ const privacyData: Record<string, { title: string; date: string; content: React.
           <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-blue-600" /> 1. Informasi yang Kami Kumpulkan
           </h2>
-          <p>Aplikasi ini dirancang tanpa mengharuskan pendaftaran akun. Namun, data teknis berikut mungkin dikumpulkan secara otomatis:</p>
+          <p>Aplikasi ini dirancang untuk dapat digunakan tanpa mengharuskan pendaftaran akun (login). Namun, untuk menyediakan layanan yang optimal, kami mungkin mengumpulkan data teknis tertentu secara otomatis:</p>
           <ul className="list-disc ml-6 space-y-2 text-sm">
-            <li><strong>Data Penggunaan:</strong> Informasi resep yang paling sering dilihat.</li>
-            <li><strong>Data Perangkat:</strong> Model perangkat dan versi sistem operasi.</li>
+            <li><strong>Data Penggunaan:</strong> Informasi mengenai resep yang paling sering dilihat atau kategori yang Anda akses untuk meningkatkan konten kami.</li>
+            <li><strong>Data Perangkat:</strong> Informasi teknis seperti model perangkat, versi sistem operasi, dan pengidentifikasi unik perangkat (seperti Advertising ID) untuk keperluan iklan dan analisis performa.</li>
+            <li><strong>Data Lokasi Kasar:</strong> Informasi lokasi umum (setingkat kota/negara) yang disediakan oleh alamat IP Anda untuk menyesuaikan iklan yang relevan.</li>
           </ul>
         </section>
 
@@ -73,15 +74,17 @@ const privacyData: Record<string, { title: string; date: string; content: React.
           <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
             <Database className="w-5 h-5 text-blue-600" /> 2. Layanan Pihak Ketiga
           </h2>
-          <p>Kami menggunakan layanan berikut untuk fungsionalitas aplikasi:</p>
+          <p>Kami bekerja sama dengan penyedia layanan pihak ketiga untuk menjalankan fungsi aplikasi:</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-5 border border-slate-100 rounded-2xl">
               <span className="text-slate-900 font-bold text-sm block mb-1">Supabase</span>
-              <p className="text-xs">Database untuk menyajikan data resep secara dinamis.</p>
+              <p className="text-xs">Kami menggunakan Supabase sebagai penyedia basis data untuk menyajikan data resep secara dinamis.</p>
             </div>
             <div className="p-5 border border-slate-100 rounded-2xl">
               <span className="text-slate-900 font-bold text-sm block mb-1">Google AdMob</span>
-              <p className="text-xs">Menampilkan iklan relevan menggunakan pengidentifikasi iklan perangkat.</p>
+              <p className="text-xs">
+                Kami menampilkan iklan melalui Google AdMob. AdMob dapat mengumpulkan dan menggunakan data seperti ID iklan perangkat Anda untuk menampilkan iklan yang relevan. Anda dapat melihat kebijakan privasi mereka di: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://policies.google.com/privacy</a>.
+              </p>
             </div>
           </div>
         </section>
@@ -90,18 +93,51 @@ const privacyData: Record<string, { title: string; date: string; content: React.
           <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
             <Activity className="w-5 h-5 text-blue-600" /> 3. Izin Aplikasi (Permissions)
           </h2>
+          <p>Aplikasi kami memerlukan izin berikut agar dapat berfungsi dengan baik:</p>
           <div className="space-y-2 text-sm">
             <p><strong>INTERNET:</strong> Diperlukan untuk mengambil data resep dari database Supabase.</p>
             <p><strong>ACCESS_NETWORK_STATE:</strong> Diperlukan untuk mengecek koneksi internet perangkat.</p>
           </div>
         </section>
 
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-blue-600" /> 4. Keamanan Data (Data Security)
+          </h2>
+          <p>Kami sangat serius dalam menjaga keamanan data Anda:</p>
+          <ul className="list-disc ml-6 space-y-2 text-sm">
+            <li><strong>Enkripsi dalam Transit:</strong> Semua data yang dikirimkan antara aplikasi dan server pihak ketiga (Supabase/AdMob) dilakukan melalui protokol aman yang terenkripsi (HTTPS/SSL).</li>
+            <li><strong>Penyimpanan:</strong> Kami tidak menyimpan informasi pribadi yang dapat diidentifikasi (seperti nama atau alamat) di server kami sendiri.</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <Database className="w-5 h-5 text-blue-600" /> 5. Penghapusan Data & Retensi (Data Deletion)
+          </h2>
+          <p>Karena aplikasi ini tidak menggunakan sistem akun, kami tidak menyimpan profil pengguna secara permanen.</p>
+          <ul className="list-disc ml-6 space-y-2 text-sm">
+            <li>Data teknis yang dikumpulkan oleh pihak ketiga (seperti Google AdMob) tunduk pada kebijakan retensi mereka.</li>
+            <li>Jika Anda memiliki pertanyaan atau ingin meminta penghapusan data teknis yang terkait dengan penggunaan aplikasi Anda, silakan hubungi kami melalui email yang tertera di bawah.</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">6. Privasi Anak (Children's Privacy)</h2>
+          <p>Aplikasi Resep Masakan Indonesia tidak ditujukan secara khusus untuk anak-anak di bawah usia 13 tahun. Kami tidak secara sengaja mengumpulkan informasi pribadi dari anak-anak. Jika Anda adalah orang tua dan mengetahui bahwa anak Anda telah memberikan data kepada kami, silakan hubungi kami agar kami dapat mengambil tindakan yang diperlukan.</p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-slate-900">7. Perubahan pada Kebijakan Privasi ini</h2>
+          <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Setiap perubahan akan diumumkan dengan memperbarui tanggal "Terakhir diperbarui" di bagian atas halaman ini.</p>
+        </section>
+
         <section className="bg-slate-950 p-10 rounded-3xl text-slate-200">
           <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <Mail className="w-5 h-5 text-blue-400" /> 4. Hubungi Kami
+            <Mail className="w-5 h-5 text-blue-400" /> 8. Hubungi Kami
           </h2>
-          <p className="text-blue-400 font-medium text-lg">azwar.pnl@gmail.com</p>
-          <p className="text-slate-400 text-sm mt-1 font-normal">multi-jasa-net.vercel.app</p>
+          <p>Jika Anda memiliki pertanyaan atau saran mengenai Kebijakan Privasi ini, jangan ragu untuk menghubungi kami:</p>
+          <p className="text-blue-400 font-medium text-lg mt-2">azwar.pnl@gmail.com</p>
         </section>
       </div>
     )
